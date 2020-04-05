@@ -1,0 +1,105 @@
+* {
+  padding: 0px;
+  border: 0px;
+  box-sizing: border-box;
+}
+
+.circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  transition: 1s;
+}
+
+.circle .share {
+  position: relative;
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f7b32b;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.circle ul {
+  list-style-type: none;
+  position: absolute;
+  display: block;
+  background-color: greenyellow;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  top: -75%;
+  left: -55%;
+  z-index: 0;
+  transition: 1s;
+  transform: scale(0.3) rotate(180deg);
+}
+
+.circle ul:hover {
+  transform: scale(1) rotate(0deg);
+}
+
+.circle ul::before {
+  content: "";
+  position: relative;
+  left: 50%;
+  display: block;
+  height: 100%;
+  width: 2px;
+  background-color: white;
+  transform: rotate(45deg);
+}
+
+.circle ul::after {
+  content: "";
+  position: relative;
+  top: -145%;
+  left: 50%;
+  display: block;
+  height: 100%;
+  width: 2px;
+  background-color: white;
+  transform: rotate(-45deg);
+}
+
+.circle ul li i {
+  color: #69663e;
+  cursor: pointer;
+}
+
+.circle ul li i:hover {
+  transform: scale(1.5);
+  color: #2d1e2f;
+}
+
+.circle ul li:nth-child(1) {
+  position: relative;
+  top: -90%;
+  left: 47%;
+}
+
+.circle ul li:nth-child(2) {
+  position: relative;
+  top: -30%;
+  left: 45%;
+}
+
+.circle ul li:nth-child(3) {
+  position: relative;
+  top: -75%;
+  left: 10%;
+}
+
+.circle ul li:nth-child(4) {
+  position: relative;
+  top: -85%;
+  left: 80%;
+}
